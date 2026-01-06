@@ -1,0 +1,10 @@
+{
+  "id": "remarkable-cloud-sync",
+  "name": "reMarkable Cloud Sync",
+  "version": "0.1.0",
+  "minAppVersion": "1.0.0",
+  "description": "Sync your reMarkable tablet notebooks and annotations to Obsidian via the Cloud API",
+  "author": "Your Name",
+  "authorUrl": "https://github.com/yourusername",
+  "isDesktopOnly": true
+}

@@ -1,0 +1,191 @@
+/* reMarkable Cloud Sync Plugin Styles */
+
+/* Connection Modal */
+.remarkable-code-input {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.remarkable-code-input input {
+    font-family: monospace;
+    text-transform: lowercase;
+}
+
+.remarkable-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* File Browser Modal */
+.remarkable-file-browser {
+    min-width: 400px;
+}
+
+.remarkable-nav {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.remarkable-file-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 5px;
+}
+
+.remarkable-file-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--background-modifier-border);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.remarkable-file-item:last-child {
+    border-bottom: none;
+}
+
+.remarkable-file-item:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+.remarkable-file-item .remarkable-sync-btn {
+    margin-left: auto;
+    padding: 4px 12px;
+    font-size: 12px;
+}
+
+.remarkable-file-item .remarkable-synced {
+    margin-left: 10px;
+    color: var(--text-success);
+    font-weight: bold;
+}
+
+.remarkable-empty {
+    padding: 20px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+/* Settings Tab */
+.remarkable-status {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--background-secondary);
+}
+
+.remarkable-connected {
+    color: var(--text-success);
+    font-weight: 500;
+}
+
+.remarkable-disconnected {
+    color: var(--text-error);
+    font-weight: 500;
+}
+
+/* Document Display */
+.remarkable-page {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--background-primary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 5px;
+}
+
+.remarkable-page-header {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.remarkable-page img,
+.remarkable-page svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* SVG rendering */
+.remarkable-svg-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.remarkable-svg-container svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Dark mode adjustments for SVG */
+.theme-dark .remarkable-svg-container {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* Loading states */
+.remarkable-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: var(--text-muted);
+}
+
+.remarkable-loading::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--text-muted);
+    border-top-color: transparent;
+    border-radius: 50%;
+    margin-right: 10px;
+    animation: remarkable-spin 1s linear infinite;
+}
+
+@keyframes remarkable-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Error states */
+.remarkable-error {
+    padding: 20px;
+    text-align: center;
+    color: var(--text-error);
+    background-color: var(--background-modifier-error);
+    border-radius: 5px;
+}
+
+/* Sync progress */
+.remarkable-sync-progress {
+    padding: 15px;
+    background-color: var(--background-secondary);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.remarkable-sync-progress-bar {
+    height: 4px;
+    background-color: var(--background-modifier-border);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.remarkable-sync-progress-bar-fill {
+    height: 100%;
+    background-color: var(--interactive-accent);
+    transition: width 0.3s ease;
+}
